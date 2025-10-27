@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TLSleuth"
+version = "2025.0.1"
+requires-python = ">=3.6"
+authors = [
+  {name = "Rafael Fron", email = "range.bay8483@eagereverest.com"},
+]
+maintainers = [
+  {name = "Rafael Fron", email = "range.bay8483@eagereverest.com"}
+]
+description = "Scans a network for SSL certificates. Checks the TLS versions used, expired certificates, and weak encryption suites."
+readme = "README.md"
+keywords = ["tls", "ssl", "certificates", "https", "web", "encryption"]
+classifiers = [
+"Development status :: 3 - Alpha",
+
+"Intended audience :: IT engineers, sys-admins, SOC analysts",
+"Topic :: Cybersecurity :: SSL Reminder",
+
+"Programming Language :: Python :: 3.6",
+"Programming Language :: Python :: 3.7",
+"Programming Language :: Python :: 3.8",
+"Programming Language :: Python :: 3.9",
+]
+
+[project.scripts]
+TLSleuth = "tlsleuth.__main__:main"
+
+[project.urls]
+Repository = "https://github.com/RafaLe0/TLSleuth"
+Issues = "https://github.com/RafaLe0/TLSleuth/issues"
+
+[tool.setuptools.packages.find]
+include = ["tlsleuth", "tlsleuth.*"]
+
+[tool.setuptools.package-data]
+"tlsleuth" = ["src/assets/*.txt"]
+
