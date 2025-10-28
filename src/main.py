@@ -11,6 +11,9 @@ import logging
 import argparse
 from tlsleuth.utils import load_ascii
 from tlsleuth.scanner import scan_host_list
+from tlsleuth.logger_setup import setup_logging
+
+logger = setup_loggin()
 
 def parse_args():
     parser = argparse.ArgumentParser(
@@ -31,7 +34,7 @@ def main():
     Main entry point of TLSleuth.
     Prints the banner and initializes the scanner CLI.
     """
-    print(load_ascii())
+    logger.info("\n" + load_ascii())
     args = parse_args()
 
     hosts = []
