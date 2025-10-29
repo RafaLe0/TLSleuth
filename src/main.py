@@ -65,6 +65,8 @@ def main():
     hosts = load_hosts(args)
     logger.info(f"Loaded {len(hosts)} host(s) for scanning")
 
+    logger.debug("[*] VERBOSE : Starting the scan...")
+    scanResult = scan_host_list(hosts, timeout=args.timeout, verbose=args.verbose)
 
     
 
