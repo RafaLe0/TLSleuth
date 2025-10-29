@@ -25,12 +25,13 @@ def parse_args():
         prog="TLSleuth",
         description="Scan hosts for weak TLS/SSL settings and certificate issues."
     )
-    parser.add_argument("--host", type=str, help="Single host to scan (ex: example.com)")
-    parser.add_argument("--file", type=str, help="File containing list of hosts, one per line")
-    parser.add_argument("--timeout", type=int, default=5, help="Connection timeout in seconds")
-    parser.add_argument("--json", action="store_true", help="Output results in JSON format")
-    parser.add_argument("--verbose", action="store_true", help="Enable verbose output for debugging")
+    parser.add_argument("--host", "-H", type=str, help="Single host to scan (ex: example.com)")
+    parser.add_argument("--file", "-f", type=str, help="File containing list of hosts, one per line")
+    parser.add_argument("--timeout", "-t", type=int, default=5, help="Connection timeout in seconds")
+    parser.add_argument("--json", "-j", action="store_true", help="Output results in JSON format")
+    parser.add_argument("--verbose", "-v", action="store_true", help="Enable verbose output for debugging")
     return parser.parse_args()
+
 
 def load_hosts(args):
     """Load hosts from --host or --file."""
