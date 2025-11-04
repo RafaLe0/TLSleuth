@@ -32,6 +32,11 @@ classifiers = [
 ]
 dependencies = []
 
+[project.optional-dependencies]
+test = [
+  "pytest>=7.0",
+]
+
 [project.scripts]
 tlsleuth = "tlsleuth.cli:main"
 

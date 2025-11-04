@@ -2,6 +2,15 @@ from datetime import datetime
 import json
 
 def print_in_json(scanResult):
+    """Print scan results in JSON format.
+    
+    Args:
+        scanResult (list): List of scan result dictionaries.
+
+    Returns:
+        None
+    """
+
     print(json.dumps(scanResult, indent=4))
 
 
