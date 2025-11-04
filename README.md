@@ -87,27 +87,6 @@ python -m tlsleuth --host example.com
 
 Project uses a `src/` layout and `setuptools` packaging. The package is `tlsleuth`.
 
-## Publish to PyPI
-
-1. Build the distribution:
-	```bash
-	python -m pip install --upgrade build twine
-	python -m build
-	```
-2. Upload to TestPyPI first:
-	```bash
-	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
-	```
-3. Install from TestPyPI and smoke test:
-	```bash
-	python -m pip install --index-url https://test.pypi.org/simple/ --no-deps tlsleuth
-	tlsleuth --host example.com --json
-	```
-4. Publish to PyPI:
-	```bash
-	twine upload dist/*
-	```
-
 ## License
 
 MIT © Rafael Fron
